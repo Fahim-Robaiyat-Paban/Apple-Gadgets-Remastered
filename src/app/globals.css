@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* Palette: ultramarine + sticker yellow, with deep indigo for depth and a hot coral for sale.
+   Every gradient on every page is built from these, so the whole store reads as one family. */
+@theme {
+  --color-ink: #0c0f3a;
+  --color-deep: #151a8c;
+  --color-brand: #2b36ff;
+  --color-mist: #dde1ff;
+  --color-paper: #f5f6ff;
+  --color-sticker: #ffd60a;
+  --color-glow: #ff9f1c;
+  --color-sale: #e0301e;
+  --ease-brand: cubic-bezier(0.65, 0, 0.35, 1);
+  --site-container-width: 1320px;
+  --animate-marquee: marquee 45s linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@theme inline {
+  --font-sans: var(--font-bricolage), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+.site-container {
+  @apply mx-auto w-full;
+  max-width: var(--site-container-width);
+}
